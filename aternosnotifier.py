@@ -13,7 +13,7 @@ def main(bot_id):
     new_status = aternos_scraper.get_status().lower()
 
     if new_status != old_status:
-        msg = f"The server is {new_status}."
+        msg = "The server is " + new_status + "."
         groupme.send_message(msg, bot_id)
     with open("status.txt", "w") as f:
         f.write(new_status)
